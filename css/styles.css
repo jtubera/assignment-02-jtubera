@@ -1,0 +1,152 @@
+html {
+    font-size: 62.5%;
+}
+
+/* mobile first css */
+body {
+    font-family: 'B612', sans-serif;
+    font-size: 1.6rem;
+    background-color: #ffff;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background-color: #171816;
+    padding: 2%;
+}
+
+header a {
+    color: #a69e8b;
+    text-decoration: none;
+    display: block; 
+}
+
+.menu a:hover,
+.menu a:active {
+    background-color: gainsboro;
+    border-radius: 4px;
+}
+
+.toggle-btn {
+    border: none;
+    background-color: #171816;
+    outline: none; 
+}
+
+.toggle-btn:hover {
+    cursor: pointer; 
+}
+
+svg rect {
+    fill: #a69e8b; 
+}
+
+.menu li {
+    line-height: 4rem; 
+    text-align: left;
+    padding-left: 1rem;
+    }
+
+
+header nav {
+    position: absolute;
+    top: 6.6rem;
+    left: 0;
+    background-color: #171816;
+    width: 100vw; 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+}
+
+
+.login{
+    border: 1px solid rgb(212,211,211);
+    user-select: none;
+    padding: 0.25rem 1rem;
+    background: #171816;
+    color: #a69e8b;
+    text-decoration: none;
+    box-shadow: 0 0 8px 0 rgb(222,222,222);
+    display:flex;
+    flex-wrap: wrap;
+
+}
+
+
+.banner{
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    width: 520px;
+    height: 480px;
+
+}
+
+.text-container {
+    background-color: #daa03d;
+    width:288px;
+    height: 432px;
+    margin: 0 auto
+}
+
+ul.menu {
+    padding-bottom: 1rem;
+}
+
+
+.show-nav { 
+    max-height: 30rem;
+}
+
+
+}
+
+/*--- Footer --- */
+footer {
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+
+
+@media only screen and (min-width: 520px) {
+       
+
+       .toggle-btn {
+            display: none;
+        }
+        /* Max height indicates that it can be less than 30rem but never larger */
+        header nav {
+            max-height: 30rem;
+            position: static; 
+            max-width: 60%; 
+            overflow: visible; 
+        }
+
+        .menu,
+        header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul.menu li {
+
+            flex-grow: 1; 
+            flex-shrink: 0; 
+            flex-basis: auto; 
+        }
+    }
+
+@media only screen and (min-width: 1300px) {
+
+        header {
+            width: 1300px;
+            margin: 0 auto;
+        }
+    }
